@@ -4,15 +4,14 @@ metadata:
   name: clusterpod
   labels:
     name: frontend
-		project: expense
-		environment: dev
+    project: expense
+    environment: dev
 spec:
   containers:
     - name: nginx
-      image: nginx:1.14.2
+      image: nginx
 
 ---
-
 apiVersion: v1
 kind: Service
 metadata:
@@ -20,9 +19,9 @@ metadata:
 spec:
   selector:
     name: frontend
-		project: expense
-		environment: dev
+    project: expense
+    environment: dev
   ports:
-  - protocol: TCP
-    port: 80
-    targetPort: 80
+    - protocol: TCP
+      port: 80
+      targetPort: 80
