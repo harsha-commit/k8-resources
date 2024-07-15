@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: annotations
+  annotations:
+    kubernetes.io/created-by: "harsha"
+    jenkins.build.url: "https://jenkins.harshadevops.site/expense/job"
+spec:
+  containers:
+    - name: nginx
+      image: nginx:1.14.2
+      ports:
+        - containerPort: 80
