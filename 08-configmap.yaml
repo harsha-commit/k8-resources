@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: configmap
+data:
+  course: "DevOps with AWS"
+  trainer: "Sivakumar"
+  github: "https://github.com/harsha-commit/expense-kubernetes.git"
